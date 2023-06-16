@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Sign-Up!</title>
+</head>
+<body>
+    <section class="main">
+        <div class="container1">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up now to get started. <br><br> You know you want to.
+            </p>
+        </div>
+        <div class="side">
+            <p>Discover a new path</p>
+            <footer>Photo by <a href="https://unsplash.com/@spensersembrat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Spenser Sembrat</a> on Unsplash</a>
+            </footer>
+        </div>
+        
+        <div class="wrapper">
+            <p>Sign Up Now!</p>
+            <form action="" method="post">
+                <div class="container2">
+                <div class="input">
+                <label for="first-name">First Name</label>
+                <input required type="text" name="first-name" id="first-name">
+                </div>
+                
+                <div class="input">
+                <label for="last-name">Last Name</label>
+                <input required type="text" name="last-name" id="last-name">
+                </div>
+                
+                <div class="input">
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email" placeholder="johndoe@email.com">
+                </div>
+                
+                <div class="input">
+                <label for="number">Number</label>
+                <input required type="number" name="number" id="number" placeholder="xxx-xxx-xxxx">
+                </div>
+                
+                <div class="input">
+                <label for="password">Password</label>
+                <input required class="error" type="password" name="password" id="password">
+                </div>
+                
+                <div class="input">
+                <label for="password">Confirm Password</label>
+                <input required class="error" type="password" name="password" id="password2">
+                </div>
+                </div>
+                <button class="create-Acc" id="create-Acc">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+            
+        </form>
+            
+    </section>
+
+    <script>
+        const pw = document.getElementById('password');
+        const pw2 = document.getElementById('password2');
+        const submit = document.getElementById('create-Acc');
+
+        submit.addEventListener('click', () =>{
+            if (pw.textContent === pw2.textContent) {
+                return;
+            }
+            else{
+                alert("Passwords do not match!");
+            }
+        });
+
+
+    </script>
+</html>
